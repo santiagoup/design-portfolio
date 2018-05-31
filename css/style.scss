@@ -127,6 +127,12 @@ table {
 $black: #222222;
 $white: #fff;
 $silver: #ababab;
+
+//breakpoint
+$break-large: 992px;
+$break-medium: 768px;
+$break-small: 576px; 
+
 //fonts
 $main-font-black: avenirBlack;
 $main-font: avenir;
@@ -188,12 +194,6 @@ $main-font: avenir;
     .main-text,.main-link {
         font-size: 21px !important;
         line-height: 33px !important;
-    }
-    .description {
-        p {
-            font-size: 24px !important;
-            line-height: 32px !important;
-        }
     }
 }
 @mixin base-mobile-font {
@@ -428,15 +428,18 @@ h2 {
     margin-top: 65px !important;
 }
 .homepage-hero-image-and-title {
-    position: relative;
-    @include clearfix;
-    @include spacing(80px, null);
+    @include spacing(100px, null);
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    box-sizing: border-box;    
     .title {
         width: 50%;
-        min-height: 350px;
-        margin-bottom: 30%;
-        float: left;
-        @include center-horiz;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 0 12.5%;
+        box-sizing: border-box;
         h1 {
             margin: 0;
             font-size: 30px;
@@ -461,20 +464,29 @@ h2 {
                 }
             } 
         }               
-    }    
-    img {
-        width: 31%;
-        height: auto;
-        float: right;
     }
+    .image {
+        width: 50%; 
+        text-align: right;
+        padding: 0 12.5%;
+        box-sizing: border-box;      
+        img {
+            margin-right: 25px;
+            width: 100%;
+            max-width: 205px;
+        }
+    }    
+    
 }
 .container {
-    width: 100vw;
-    padding: 0;
-    float: left;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
     width: 100%;
-    padding-top: 80px;
-    margin: 0 auto;
+    max-width: 1440px;
+    padding: 40px 0;
+    margin: 10px auto;
+    background-color: #f2f2f2;
     overflow: hidden; //Instead of the line below you could use @include box-sizing($bs)
     box-sizing: border-box;
     -webkit-background-clip: padding-box;
@@ -502,35 +514,42 @@ h2 {
         }
     }
     &.right {
-        padding: 100px 0;
         .image {
-            width: 40%;
-            float: right;
+            width: 50%;
+            padding: 0 12.5%;
+            box-sizing: border-box;
             img {
-                width: 100%;
+                width: 100%;                
+                max-width: 260px;
+                float: right;
             }
         }
         .description {
-            margin: 20% auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
             width: 50%;
+            padding: 0 12.5%;
             float: left; //Instead of the line below you could use @include box-sizing($bs)
             box-sizing: border-box;
         }
     }
-    &.right-web {
-        padding: 100px 0;
+    &.bottom {
+        width:  calc(50% - 20px);
+        padding: 50px 12.5%;       
         .image {
-            width: 70%;
-            float: right;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;            
             img {
                 width: 100%;
+                float: center;
             }
         }
         .description {
-            margin: 20% auto;
-            width: 50%;
-            float: left; //Instead of the line below you could use @include box-sizing($bs)
-            box-sizing: border-box;
+            padding: 30px 0;
+            width: 100%;
         }
     }
 }
@@ -555,16 +574,75 @@ h2 {
         line-height: 33px;
     }
     p {
-        line-height: 32px;
+        font-size: 16px;
+        line-height: 30px;
+        letter-spacing: 0.17px;
         margin: 30px 0;
     }
 }
+
+@media screen and (max-width: $break-large) {
+    .container {
+        &.right {
+            .image {
+                width: 50%;
+                padding: 0 10%;
+                box-sizing: border-box;
+                img {
+                    width: 100%;                
+                    max-width: 260px;
+                    float: right;
+                }
+            }
+            .description {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                width: 50%;
+                padding: 0 10%;
+                float: left; //Instead of the line below you could use @include box-sizing($bs)
+                box-sizing: border-box;
+            }
+        }
+        &.bottom {
+            width:  calc(50% - 20px);
+            padding: 40px 10%;       
+            .image {
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;            
+                img {
+                    width: 100%;
+                    float: center;
+                }
+            }
+            .description {
+                padding: 30px 0;
+                width: 100%;
+            }
+        }
+    }
+    .description {
+        h2 {
+            font-size: 20px;
+            line-height: 28px;
+        }
+        p {
+            font-size: 14px;
+            line-height: 22px;
+            margin: 20px 0;
+        }
+    }
+}
 .wrapper {
-    width: 60%;
-    max-width: 1000px;
-    min-width: 800px;
     margin: 0 auto;
+    padding: 0 20px;
     @include clearfix;
+    &.bottom {
+        display: flex;
+        flex-wrap: wrap;
+    }
 }
 .design_subheading {
     font-size: 16px;
@@ -831,7 +909,7 @@ footer {
         text-align: center;
         margin: 0 auto;
         @include clearfix;
-        @include spacing(200px, 100px);
+        @include spacing(100px, 100px);
         .footer-image-cont {
             position: relative;
             transform-style: preserve-3d;
@@ -853,6 +931,21 @@ footer {
                 top: 50%;
                 left: 50%;
                 font-size: 48px !important;
+            }
+        }
+        h1 {
+
+            color: $black;
+            font-size: 24px;
+            letter-spacing: 0.26px;
+            line-height: 33px;
+        }
+        p {
+            font-size: 16px;
+            letter-spacing: 0.17px;
+            line-height: 30px;
+            a {
+                color: $black;
             }
         }
     }
@@ -974,17 +1067,6 @@ footer {
             .description {
                 padding: 0;
             }
-        }
-    }
-    .homepage-hero-image-and-title {
-        .title {
-            width: 50%;
-            padding-right: 0;
-            margin-bottom: 60%;
-        }
-        img {
-            float: right;
-            width: 300px;
         }
     }
     .homepage-laptop-container {
@@ -1127,12 +1209,6 @@ footer {
         margin-top: 80px;
         text-align: center;
         .title {
-            margin-bottom: 0;
-            width: 100%;
-            min-height: initial;
-            position: initial;
-            top: initial;
-            transform: none;
             h1 {
                 font-size: 18vw !important;
             }

@@ -184,11 +184,6 @@ table {
   line-height: 33px !important;
 }
 
-.description p {
-  font-size: 24px !important;
-  line-height: 32px !important;
-}
-
 .archive-title {
   font-size: 20px !important;
   line-height: 24px !important;
@@ -281,11 +276,6 @@ h2 {
 .main-text, .main-link {
   font-size: 21px !important;
   line-height: 33px !important;
-}
-
-.description p {
-  font-size: 24px !important;
-  line-height: 32px !important;
 }
 
 #header_work {
@@ -386,24 +376,19 @@ h2 {
 }
 
 .homepage-hero-image-and-title {
-  position: relative;
-  margin-top: 80px;
-}
-.homepage-hero-image-and-title:after {
-  content: "";
-  display: table;
-  clear: both;
+  margin-top: 100px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  box-sizing: border-box;
 }
 .homepage-hero-image-and-title .title {
   width: 50%;
-  min-height: 350px;
-  margin-bottom: 30%;
-  float: left;
-  position: absolute;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 12.5%;
+  box-sizing: border-box;
 }
 .homepage-hero-image-and-title .title h1 {
   margin: 0;
@@ -429,19 +414,27 @@ h2 {
 .homepage-hero-image-and-title .title .personal a:hover {
   border-bottom: 1px solid #222222;
 }
-.homepage-hero-image-and-title img {
-  width: 31%;
-  height: auto;
-  float: right;
+.homepage-hero-image-and-title .image {
+  width: 50%;
+  text-align: right;
+  padding: 0 12.5%;
+  box-sizing: border-box;
+}
+.homepage-hero-image-and-title .image img {
+  margin-right: 25px;
+  width: 100%;
+  max-width: 205px;
 }
 
 .container {
-  width: 100vw;
-  padding: 0;
-  float: left;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
   width: 100%;
-  padding-top: 80px;
-  margin: 0 auto;
+  max-width: 1440px;
+  padding: 40px 0;
+  margin: 10px auto;
+  background-color: #f2f2f2;
   overflow: hidden;
   box-sizing: border-box;
   -webkit-background-clip: padding-box;
@@ -469,37 +462,42 @@ h2 {
   box-sizing: border-box;
   text-align: right;
 }
-.container.right {
-  padding: 100px 0;
-}
 .container.right .image {
-  width: 40%;
-  float: right;
+  width: 50%;
+  padding: 0 12.5%;
+  box-sizing: border-box;
 }
 .container.right .image img {
   width: 100%;
-}
-.container.right .description {
-  margin: 20% auto;
-  width: 50%;
-  float: left;
-  box-sizing: border-box;
-}
-.container.right-web {
-  padding: 100px 0;
-}
-.container.right-web .image {
-  width: 70%;
+  max-width: 260px;
   float: right;
 }
-.container.right-web .image img {
-  width: 100%;
-}
-.container.right-web .description {
-  margin: 20% auto;
+.container.right .description {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   width: 50%;
+  padding: 0 12.5%;
   float: left;
   box-sizing: border-box;
+}
+.container.bottom {
+  width: calc(50% - 20px);
+  padding: 50px 12.5%;
+}
+.container.bottom .image {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container.bottom .image img {
+  width: 100%;
+  float: center;
+}
+.container.bottom .description {
+  padding: 30px 0;
+  width: 100%;
 }
 
 .container-left {
@@ -518,21 +516,79 @@ h2 {
   width: 70%;
 }
 
+.description h2 {
+  font-size: 24px;
+  letter-spacing: 0.26px;
+  line-height: 33px;
+}
 .description p {
-  line-height: 32px;
+  font-size: 16px;
+  line-height: 30px;
+  letter-spacing: 0.17px;
   margin: 30px 0;
 }
 
+@media screen and (max-width: 992px) {
+  .container.right .image {
+    width: 50%;
+    padding: 0 10%;
+    box-sizing: border-box;
+  }
+  .container.right .image img {
+    width: 100%;
+    max-width: 260px;
+    float: right;
+  }
+  .container.right .description {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50%;
+    padding: 0 10%;
+    float: left;
+    box-sizing: border-box;
+  }
+  .container.bottom {
+    width: calc(50% - 20px);
+    padding: 40px 10%;
+  }
+  .container.bottom .image {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .container.bottom .image img {
+    width: 100%;
+    float: center;
+  }
+  .container.bottom .description {
+    padding: 30px 0;
+    width: 100%;
+  }
+
+  .description h2 {
+    font-size: 20px;
+    line-height: 28px;
+  }
+  .description p {
+    font-size: 14px;
+    line-height: 22px;
+    margin: 20px 0;
+  }
+}
 .wrapper {
-  width: 60%;
-  max-width: 1000px;
-  min-width: 800px;
   margin: 0 auto;
+  padding: 0 20px;
 }
 .wrapper:after {
   content: "";
   display: table;
   clear: both;
+}
+.wrapper.bottom {
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .design_subheading {
@@ -814,7 +870,7 @@ footer .footer-cont {
   width: 80%;
   text-align: center;
   margin: 0 auto;
-  margin-top: 200px;
+  margin-top: 100px;
   margin-bottom: 100px;
 }
 footer .footer-cont:after {
@@ -844,6 +900,20 @@ footer .footer-cont .footer-image-cont h1 {
   top: 50%;
   left: 50%;
   font-size: 48px !important;
+}
+footer .footer-cont h1 {
+  color: #222222;
+  font-size: 24px;
+  letter-spacing: 0.26px;
+  line-height: 33px;
+}
+footer .footer-cont p {
+  font-size: 16px;
+  letter-spacing: 0.17px;
+  line-height: 30px;
+}
+footer .footer-cont p a {
+  color: #222222;
 }
 
 @-webkit-keyframes fadeIn {
@@ -964,16 +1034,6 @@ footer .footer-cont .footer-image-cont h1 {
 
   .container.right .description {
     padding: 0;
-  }
-
-  .homepage-hero-image-and-title .title {
-    width: 50%;
-    padding-right: 0;
-    margin-bottom: 60%;
-  }
-  .homepage-hero-image-and-title img {
-    float: right;
-    width: 300px;
   }
 
   .homepage-laptop-container .description {
@@ -1138,14 +1198,6 @@ footer .footer-cont .footer-image-cont h1 {
   .homepage-hero-image-and-title {
     margin-top: 80px;
     text-align: center;
-  }
-  .homepage-hero-image-and-title .title {
-    margin-bottom: 0;
-    width: 100%;
-    min-height: initial;
-    position: initial;
-    top: initial;
-    transform: none;
   }
   .homepage-hero-image-and-title .title h1 {
     font-size: 18vw !important;
