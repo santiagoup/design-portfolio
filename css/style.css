@@ -231,53 +231,6 @@ h2 {
   line-height: 50px;
 }
 
-.header {
-  font-size: 80px !important;
-  line-height: 86px !important;
-}
-
-.section-header {
-  font-size: 40px !important;
-  line-height: 41px !important;
-}
-
-.section-subheader {
-  font-size: 40px !important;
-  line-height: 41px !important;
-}
-.section-subheader.case-study-subheader {
-  font-weight: normal;
-  font-style: normal;
-  font-family: avenir;
-  font-size: 30px !important;
-  line-height: 40px !important;
-  text-align: center;
-  color: #222222;
-  margin-top: 30px;
-  margin-bottom: 100px;
-}
-.section-subheader.about-me {
-  padding-bottom: 40px !important;
-}
-
-.section-sub-subheader {
-  font-size: 20px !important;
-  line-height: 35px !important;
-  font-family: avenirBlack;
-}
-.section-sub-subheader.case-study {
-  margin-bottom: 40px;
-  font-weight: bold;
-}
-.section-sub-subheader.about-me {
-  margin-top: -40px;
-}
-
-.main-text, .main-link {
-  font-size: 21px !important;
-  line-height: 33px !important;
-}
-
 #header_work {
   background: #fff;
   opacity: 0.9;
@@ -314,15 +267,14 @@ h2 {
   animation-delay: 0.2s;
   justify-content: center;
   width: 100%;
-  margin-right: -110px;
 }
 #header_work #navigation {
   display: flex;
   align-items: center;
   height: 65px;
-  width: 70%;
+  width: 90%;
   margin: 0 auto;
-  min-width: 800px;
+  max-width: 1240px;
 }
 #header_work #navigation ul li {
   width: auto;
@@ -376,11 +328,13 @@ h2 {
 }
 
 .homepage-hero-image-and-title {
+  margin: 0 auto;
   margin-top: 100px;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
   box-sizing: border-box;
+  max-width: 1440px;
 }
 .homepage-hero-image-and-title .title {
   width: 50%;
@@ -493,7 +447,7 @@ h2 {
 }
 .container.bottom .image img {
   width: 100%;
-  float: center;
+  box-shadow: 6px 8px 10px 3px rgba(0, 0, 0, 0.3), 6px 7px 20px 0 rgba(0, 0, 0, 0.37);
 }
 .container.bottom .description {
   padding: 30px 0;
@@ -528,55 +482,6 @@ h2 {
   margin: 30px 0;
 }
 
-@media screen and (max-width: 992px) {
-  .container.right .image {
-    width: 50%;
-    padding: 0 10%;
-    box-sizing: border-box;
-  }
-  .container.right .image img {
-    width: 100%;
-    max-width: 260px;
-    float: right;
-  }
-  .container.right .description {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 50%;
-    padding: 0 10%;
-    float: left;
-    box-sizing: border-box;
-  }
-  .container.bottom {
-    width: calc(50% - 20px);
-    padding: 40px 10%;
-  }
-  .container.bottom .image {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .container.bottom .image img {
-    width: 100%;
-    float: center;
-  }
-  .container.bottom .description {
-    padding: 30px 0;
-    width: 100%;
-  }
-
-  .description h2 {
-    font-size: 20px;
-    line-height: 28px;
-  }
-  .description p {
-    font-size: 14px;
-    line-height: 22px;
-    margin: 20px 0;
-  }
-}
 .wrapper {
   margin: 0 auto;
   padding: 0 20px;
@@ -589,6 +494,7 @@ h2 {
 .wrapper.bottom {
   display: flex;
   flex-wrap: wrap;
+  max-width: 1440px;
 }
 
 .design_subheading {
@@ -631,35 +537,6 @@ h3 a:hover {
 a {
   text-decoration: none;
   color: #fff;
-}
-
-.homepage-laptop-container {
-  position: relative;
-  clear: both;
-  width: 100%;
-}
-.homepage-laptop-container:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-.homepage-laptop-container img {
-  max-width: 50%;
-  float: right;
-  margin: 0;
-}
-.homepage-laptop-container .description {
-  width: 30%;
-  margin-left: 18%;
-  position: absolute;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-  clear: both;
-}
-.homepage-laptop-container .description p {
-  margin: 30px 0;
 }
 
 .hero-title {
@@ -869,9 +746,7 @@ a {
 footer .footer-cont {
   width: 80%;
   text-align: center;
-  margin: 0 auto;
-  margin-top: 100px;
-  margin-bottom: 100px;
+  margin: 100px auto;
 }
 footer .footer-cont:after {
   content: "";
@@ -911,6 +786,7 @@ footer .footer-cont p {
   font-size: 16px;
   letter-spacing: 0.17px;
   line-height: 30px;
+  padding-top: 40px;
 }
 footer .footer-cont p a {
   color: #222222;
@@ -959,20 +835,156 @@ footer .footer-cont p a {
   animation-delay: 0s;
 }
 
-@media screen and (max-width: 920px) {
-  .wrapper {
-    width: 95%;
-    margin: 0 auto;
-    max-width: 2000px;
+@media screen and (max-width: 992px) {
+  .homepage-hero-image-and-title .title {
+    padding: 0 10%;
+  }
+  .homepage-hero-image-and-title .title h1 {
+    font-size: 20px;
+    line-height: 28px;
+  }
+  .homepage-hero-image-and-title .title p {
+    font-size: 14px;
+    line-height: 22px;
+    margin: 20px 0;
+    padding-top: 20px;
+  }
+  .homepage-hero-image-and-title .title .personal a {
+    font-size: 14px;
+    line-height: 22px;
+  }
+  .homepage-hero-image-and-title .image {
+    width: 50%;
+    text-align: right;
+    padding: 0 10%;
+    box-sizing: border-box;
+  }
+  .homepage-hero-image-and-title .image img {
+    width: 100%;
+    max-width: 150px;
+  }
+
+  .container.right .image {
+    width: 50%;
+    padding: 0 10%;
+    box-sizing: border-box;
+  }
+  .container.right .image img {
+    width: 100%;
+    max-width: 200px;
+    float: right;
+  }
+  .container.right .description {
+    width: 50%;
+    padding: 0 10%;
+  }
+  .container.bottom {
+    width: calc(50% - 20px);
+    padding: 40px 10%;
+  }
+  .container.bottom .image {
+    width: 100%;
+  }
+  .container.bottom .image img {
+    width: 100%;
+  }
+  .container.bottom .description {
+    padding: 30px 0;
+    width: 100%;
+  }
+
+  .description h2 {
+    font-size: 20px;
+    line-height: 28px;
+  }
+  .description p {
+    font-size: 14px;
+    line-height: 22px;
+    margin: 20px 0;
+  }
+
+  footer .footer-cont {
+    margin: 50px auto;
+  }
+  footer .footer-cont h1 {
+    font-size: 20px;
+    line-height: 28px;
+  }
+  footer .footer-cont p {
+    padding-top: 30px;
+    font-size: 14px;
+    line-height: 22px;
   }
 }
 @media screen and (max-width: 768px) {
-  .wrapper {
-    width: 95%;
-    margin: 0;
-    margin-left: 2.5%;
-    max-width: 2000px;
-    min-width: initial;
+  .homepage-hero-image-and-title .title {
+    padding: 0 6%;
+  }
+  .homepage-hero-image-and-title .title h1 {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .homepage-hero-image-and-title .title p {
+    font-size: 12px;
+    line-height: 18px;
+    margin: 15px 0;
+    padding-top: 15px;
+  }
+  .homepage-hero-image-and-title .title .personal a {
+    font-size: 12px;
+    line-height: 18px;
+  }
+  .homepage-hero-image-and-title .image {
+    text-align: right;
+    padding: 0 6%;
+    box-sizing: border-box;
+  }
+  .homepage-hero-image-and-title .image img {
+    width: 100%;
+    max-width: 150px;
+  }
+
+  .container.right .image {
+    width: 50%;
+    padding: 0 6%;
+    box-sizing: border-box;
+  }
+  .container.right .image img {
+    width: 100%;
+    max-width: 200px;
+    float: right;
+  }
+  .container.right .description {
+    width: 50%;
+    padding: 0 6%;
+  }
+  .container.bottom {
+    width: calc(50% - 20px);
+    padding: 40px 6%;
+  }
+  .container.bottom .image {
+    width: 100%;
+  }
+  .container.bottom .image img {
+    width: 100%;
+  }
+  .container.bottom .description {
+    padding: 30px 0;
+    width: 100%;
+  }
+
+  .section a {
+    font-size: 13px;
+  }
+
+  .description h2 {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .description p {
+    font-size: 12px;
+    line-height: 18px;
+    margin: 15px 0;
   }
 
   #header_work .nav-hamburger {
@@ -1032,144 +1044,98 @@ footer .footer-cont p a {
     margin-top: 30%;
   }
 
+  footer .footer-cont {
+    margin: 50px auto;
+  }
+  footer .footer-cont h1 {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  footer .footer-cont p {
+    padding-top: 20px;
+    font-size: 12px;
+    line-height: 18px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .homepage-hero-image-and-title .title {
+    margin-top: 20px;
+    order: 2;
+    width: 100%;
+    padding: 0 10%;
+  }
+  .homepage-hero-image-and-title .title h1 {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .homepage-hero-image-and-title .title p {
+    font-size: 12px;
+    line-height: 18px;
+    margin: 15px 0;
+    padding-top: 15px;
+  }
+  .homepage-hero-image-and-title .title .personal a {
+    font-size: 12px;
+    line-height: 18px;
+  }
+  .homepage-hero-image-and-title .image {
+    order: 1;
+    width: 100%;
+    text-align: center;
+    padding: 0 10%;
+  }
+  .homepage-hero-image-and-title .image img {
+    margin-right: 0;
+    width: 100%;
+    max-width: 150px;
+  }
+
+  .container {
+    margin: 20px auto;
+  }
+  .container.right .image {
+    order: 1;
+    width: 100%;
+    padding: 0 10%;
+    text-align: center;
+  }
+  .container.right .image img {
+    width: 100%;
+    max-width: 150px;
+    float: unset;
+  }
   .container.right .description {
-    padding: 0;
-  }
-
-  .homepage-laptop-container .description {
-    margin-left: 2.5%;
-    width: 50%;
-    padding-top: 120px;
-  }
-
-  .featured-cont {
-    display: block;
-  }
-  .featured-cont .featured-image-cont {
-    overflow: unset;
+    margin-top: 20px;
+    order: 2;
     width: 100%;
-    height: auto;
+    padding: 0 10%;
   }
-  .featured-cont .featured-image-cont .featured-copy {
-    background: transparent;
-    position: relative;
-    padding: 0;
-  }
-  .featured-cont .featured-image-cont .featured-copy p, .featured-cont .featured-image-cont .featured-copy h1 {
-    color: #222222;
-  }
-  .featured-cont .featured-image-cont .featured-copy h1 {
-    font-size: 30px;
-  }
-  .featured-cont .featured-image-cont .featured-copy p {
-    font-size: 25px;
-  }
-  .featured-cont .featured-image-cont .featured-copy:nth-of-type(1) {
-    padding-bottom: 50px;
-  }
-
-  .recent-container .recent-info-modal {
-    display: block;
-    height: auto;
-  }
-  .recent-container .recent-info-modal .recent-img-container img {
-    height: 450px;
+  .container.bottom {
     width: 100%;
-    float: none;
+    padding: 40px 10% 20px 10%;
   }
-  .recent-container .recent-info-modal .recent-copy-container p {
-    font-size: 25px;
-    padding: 20px 5px;
+  .container.bottom .image {
+    width: 100%;
   }
-  .recent-container .recent-info-modal .recent-copy-container p:nth-child(2) {
-    font-size: 20px;
-    padding-top: 0;
+  .container.bottom .image img {
+    width: 70%;
   }
-
-  .experience-container .experience-list:nth-of-type(1) {
-    margin-right: 38%;
-  }
-
-  .hero-image {
-    margin-left: 0;
-    max-width: 100%;
+  .container.bottom .description {
+    padding: 30px 0;
     width: 100%;
   }
 
   footer .footer-cont {
-    width: 100%;
+    margin: 30px auto;
   }
-  footer .footer-cont .footer-image-cont h1 {
-    font-size: 50px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
+  footer .footer-cont h1 {
+    font-size: 16px;
+    line-height: 24px;
   }
-}
-@media screen and (max-width: 500px) {
-  .header {
-    font-size: 50px !important;
-    line-height: 56px !important;
-  }
-
-  .section-header {
-    font-size: 32px !important;
-    line-height: 33px !important;
-  }
-
-  .section-subheader {
-    font-size: 32px !important;
-    line-height: 33px !important;
-  }
-
-  .section-sub-subheader {
-    font-size: 14px !important;
-    line-height: 20px !important;
-    padding-bottom: 20px !important;
-  }
-
-  .section-list-item {
-    font-size: 14px !important;
-    line-height: 20px !important;
-    padding-bottom: 20px !important;
-  }
-
-  .main-text, .main-link {
-    font-size: 18px !important;
-    line-height: 28px !important;
-  }
-
-  .back-to-portfolio-link {
-    font-size: 24px !important;
-    line-height: 29px !important;
-    margin: 20px auto !important;
-  }
-
-  .wrapper {
-    width: 90%;
-    margin: 0 auto;
-  }
-
-  .description .homepage-project-title {
-    font-size: 32px !important;
-    line-height: 33px !important;
-  }
-  .description .homepage-project-description {
-    font-size: 21px;
-    line-height: 26px;
-  }
-
-  .process-text p a {
+  footer .footer-cont p {
+    padding-top: 20px;
     font-size: 12px;
-    line-height: 26px;
-  }
-
-  .view-resume a {
-    font-size: 12px;
-    line-height: 26px;
+    line-height: 18px;
   }
 
   #header_work #navigation {
@@ -1189,220 +1155,6 @@ footer .footer-cont p a {
   }
   #header_work .logo-container a {
     height: 45px;
-  }
-
-  .header_image {
-    margin-top: 65px;
-  }
-
-  .homepage-hero-image-and-title {
-    margin-top: 80px;
-    text-align: center;
-  }
-  .homepage-hero-image-and-title .title h1 {
-    font-size: 18vw !important;
-  }
-  .homepage-hero-image-and-title .title p {
-    padding-bottom: 60px;
-    line-height: 32px;
-  }
-  .homepage-hero-image-and-title img {
-    float: none;
-    width: 100%;
-  }
-
-  .container.right {
-    padding: 0;
-  }
-  .container.right .description {
-    padding-top: 100px;
-    width: 100%;
-    text-align: center;
-    margin: 0 0 50px 0;
-  }
-  .container.right .image {
-    width: 100%;
-    float: none;
-    margin-left: 20px;
-  }
-
-  .container.left {
-    padding: 0;
-  }
-  .container.left .description {
-    padding-top: 100px;
-    width: 100%;
-    text-align: center;
-    margin: 0 0 80px 0;
-  }
-  .container.left .image {
-    width: 100%;
-    float: none;
-    margin-left: 20px;
-  }
-
-  .process-title,
-.process-text {
-    margin-bottom: 50px;
-  }
-
-  .process-title.archive {
-    padding-bottom: 0;
-    margin-bottom: 0;
-  }
-
-  .hero-image {
-    margin-bottom: 50px;
-  }
-
-  .homepage-laptop-container .description {
-    width: 90%;
-    position: relative;
-    text-align: center;
-    top: initial;
-    padding: 0;
-    padding-top: 100px;
-    margin: 0 auto;
-    clear: both;
-    -moz-transform: none;
-    -o-transform: none;
-    -ms-transform: none;
-    transform: none;
-  }
-  .homepage-laptop-container .description p {
-    width: 90%;
-    margin: 30px auto;
-  }
-  .homepage-laptop-container img {
-    clear: both;
-    margin: 0;
-    width: 100%;
-    max-width: 100%;
-    display: block;
-    margin-top: 30px;
-  }
-
-  .featured-cont {
-    display: block;
-  }
-  .featured-cont .featured-image-cont {
-    width: 100%;
-    height: auto;
-  }
-  .featured-cont .featured-image-cont .featured-copy:nth-of-type(1) {
-    padding-bottom: 50px;
-  }
-
-  .hero-title {
-    margin-bottom: 100px;
-  }
-  .hero-title h1 {
-    font-size: 40px;
-    padding-top: 50px;
-  }
-
-  .principle-par-cont {
-    display: block;
-    padding-bottom: 50px;
-  }
-  .principle-par-cont p {
-    width: 100%;
-    margin-bottom: 50px;
-    font-size: 12px;
-    line-height: 16px;
-  }
-  .principle-par-cont p:nth-child(2) {
-    margin: 0;
-    margin-bottom: 50px;
-  }
-
-  .recent-container {
-    display: block;
-  }
-  .recent-container .recent-info-modal {
-    height: auto;
-    width: 100%;
-  }
-  .recent-container .recent-info-modal .recent-img-container img {
-    height: auto;
-  }
-
-  .experience-container .experience-list {
-    margin-right: 0;
-    width: 45%;
-  }
-  .experience-container .experience-list p {
-    font-size: 12px;
-    line-height: 26px;
-  }
-  .experience-container .experience-list:nth-of-type(1) {
-    margin-right: 10%;
-  }
-
-  .skills-container .skills-list li {
-    font-size: 12px;
-    line-height: 26px;
-  }
-
-  .skills-subheader {
-    font-size: 12px;
-    line-height: 26px;
-  }
-
-  .view-resume {
-    font-size: 12px;
-    line-height: 26px;
-  }
-  .view-resume a {
-    font-size: 12px;
-    line-height: 26px;
-  }
-
-  .process-text p {
-    font-size: 12px;
-    line-height: 26px;
-  }
-  .process-text p a {
-    font-size: 12px;
-    line-height: 26px;
-  }
-
-  .contact-link {
-    font-size: 12px;
-    line-height: 26px;
-  }
-
-  footer .footer-cont {
-    display: block;
-    margin: 0;
-    text-align: center;
-    padding-top: 100px;
-  }
-  footer .footer-cont .footer-image-cont {
-    text-align: center;
-    margin: 0;
-    padding: 0;
-    width: 90%;
-  }
-  footer .footer-cont .footer-image-cont.archive {
-    margin: 0;
-  }
-  footer .footer-cont .footer-image-cont.about-me {
-    padding-top: 20px;
-    margin-left: -10px;
-  }
-  footer .footer-cont .footer-image-cont.about-me h1 {
-    padding-left: 20px;
-  }
-  footer .footer-cont .footer-image-cont.about-me img {
-    padding-left: 20px;
-  }
-  footer .footer-cont .footer-image-cont img {
-    max-width: 90%;
-  }
-  footer .footer-cont .footer-image-cont h1 {
-    font-size: 48px !important;
-    line-height: 50px !important;
   }
 }
 
