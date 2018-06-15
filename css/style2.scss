@@ -1,0 +1,388 @@
+$break-large: 992px;
+$break-medium: 768px;
+$break-small: 576px;
+
+@mixin spacing($mt,
+$mb) {
+  margin-top: $mt;
+  margin-bottom: $mb;
+}
+
+@mixin clearfix {
+	&:after {
+		content: "";
+		display: table;
+		clear: both;
+	}
+}
+
+@mixin font-archive ($mt, $fs, $lh, $cl) {
+  margin-top: $mt !important;
+  font-size: $fs !important;
+  line-height: $lh !important;
+  color: $cl !important;
+}
+
+.wrapper-home {
+	margin: 0 auto;
+	padding: 0 20px;
+	@include clearfix;
+	&.bottom {
+		display: flex;
+		flex-wrap: wrap;
+		max-width: 1440px;
+  }
+}
+
+footer {
+  .footer-home {
+    width: 80%;
+    text-align: center;
+    margin: 100px auto;
+    @include clearfix;
+    h1 {
+      @include font-archive(0, 24px, 33px, #111111);
+      letter-spacing: 0.26px;
+    }
+    p {
+      @include font-archive(0, 14px, 30px, #333333);
+      letter-spacing: 0.26px;
+      a {
+        color: #333333;
+      }
+    }
+    
+  }
+}
+
+.container-home {
+  display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	width: 100%;
+	max-width: 1440px;
+	padding: 40px 0;
+	margin: 10px auto;
+	background-color: #f2f2f2;
+	overflow: hidden; //Instead of the line below you could use @include box-sizing($bs)
+	box-sizing: border-box;
+	-webkit-background-clip: padding-box;
+	-moz-background-clip: padding; //Instead of the line below you could use @include background-clip($clip)
+	background-clip: padding-box;
+	-webkit-transform-style: preserve-3d;
+	-moz-transform-style: preserve-3d; //Instead of the line below you could use @include transform-style($style)
+  transform-style: preserve-3d;
+ 
+  &.top {
+    margin-top: 150px;
+    background-color: unset;
+    .description {
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 0 12.5%;
+      box-sizing: border-box;
+      h1 {
+        @include font-archive(0, 30px, 42px, #111111);
+      }
+      p {
+        @include font-archive(0, 16px, 30px, #333333);
+        padding-top: 40px;        
+        letter-spacing: 0.17px;
+      }
+      .section {
+        a {
+          font-size: 14px!important;
+          padding: 5px 10px;
+          margin-right: 5px!important;
+        }
+      }
+    }
+    .image {
+      width: 50%;
+      text-align: right;
+      padding: 0 12.5%;
+      box-sizing: border-box;
+      img {
+        margin-right: 25px;
+        width: 100%;
+        max-width: 205px;
+      }
+    }
+  }
+  &.above {
+		.image {
+			width: 50%;
+			padding: 0 12.5%;
+			box-sizing: border-box;
+			img {
+				width: 100%;
+				max-width: 260px;
+				float: right;
+			}
+		}
+		.description {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			width: 50%;
+			padding: 0 12.5%;
+			float: left; //Instead of the line below you could use @include box-sizing($bs)
+      box-sizing: border-box;  
+      h2 {
+        @include font-archive(0, 24px, 33px, #111111);
+        letter-spacing: 0.26px;
+      }
+      p {
+        @include font-archive(20px, 16px, 30px, #333333);
+        letter-spacing: 0.17px;
+        margin-bottom: 20px !important;
+      }   
+		}
+  }
+  &.bottom {
+		width: calc(50% - 20px);
+		padding: 50px 12.5%;
+		.image {
+			width: 100%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			img {
+				width: 100%;
+				box-shadow: 6px 8px 10px 3px rgba(0, 0, 0, 0.3), 6px 7px 20px 0 rgba(0, 0, 0, 0.37);
+			}
+		}
+		.description {
+			padding: 30px 0;
+      width: 100%;
+      h2 {
+        @include font-archive(0, 24px, 33px, #111111);
+        letter-spacing: 0.26px;
+      }
+      p {
+        @include font-archive(20px, 16px, 30px, #333333);
+        letter-spacing: 0.17px;
+        margin-bottom: 20px !important;
+      } 
+		}
+	}
+}
+@media screen and (max-width: $break-large) {
+  .section a {
+    font-size: 12px !important;
+    margin-right: 5px !important;
+  }	
+  .container-home {
+    &.top {
+      margin-top: 150px;
+      .description {
+        padding: 0 10%;
+        h1 {
+          @include font-archive(0, 20px, 28px, #111111);
+        }
+        p {
+          @include font-archive(0, 14px, 22px, #333333);
+          padding-top: 20px;      
+        }
+        .section a {
+          font-size: 12px !important;
+        }
+      }
+      .image {
+        padding: 0 10%;
+      }
+    }
+    &.above {
+      .image {
+        padding: 0 10%;
+      }
+      .description {
+        width: 50%;
+        padding: 0 10%; 
+        h2 {
+          @include font-archive(0, 20px, 28px, #111111);
+        }
+        p {
+          @include font-archive(20px, 14px, 22px, #333333);          
+        }   
+      }
+    }
+    &.bottom {
+      padding: 40px 10%;
+      .description {
+        h2 {
+          @include font-archive(0, 20px, 28px, #111111);
+        }
+        p {
+          @include font-archive(20px, 14px, 22px, #333333);          
+        } 
+      }
+    }
+  }
+
+  footer {
+    .footer-home {
+      margin: 50px auto;
+      h1 {
+        @include font-archive(0, 20px, 28px, #111111);
+      }
+      p {
+        @include font-archive(0, 14px, 22px, #333333);
+        padding-top: 30px
+      }
+      
+    }
+  }
+}
+
+
+@media screen and (max-width: $break-medium) {
+  .container-home {
+    &.top {
+      margin-top: 150px;
+      .description {
+        padding: 0 6%;
+        h1 {
+          @include font-archive(0, 16px, 24px, #111111);
+        }
+        p {
+          @include font-archive(15, 12px, 18px, #333333);
+          padding-top: 20px; 
+          margin-bottom: 15px;     
+        }
+      }
+      .image {
+        padding: 0 6%;
+        img {
+          max-width: 150px;
+        }
+      }
+    }
+    &.above {
+      .image {
+        padding: 0 6%;
+        img {
+          max-width: 200px;
+        }
+      }
+      .description {
+        width: 50%;
+        padding: 0 6%; 
+        h2 {
+          @include font-archive(0, 20px, 28px, #111111);
+        }
+        p {
+          @include font-archive(20px, 14px, 22px, #333333);          
+        }   
+      }
+    }
+    &.bottom {
+      padding: 40px 6%;
+      .description {
+        h2 {
+          @include font-archive(0, 20px, 28px, #111111);
+        }
+        p {
+          @include font-archive(20px, 14px, 22px, #333333);          
+        } 
+      }
+    }
+  }
+  .section a {
+		font-size: 13px;
+  }
+  footer {
+    .footer-home {
+      h1 {
+        @include font-archive(0, 16px, 24px, #111111);
+      }
+      p {
+        @include font-archive(0, 12px, 18px, #333333);
+        padding-top: 20px
+      }
+      
+    }
+  }
+}
+
+@media screen and (max-width: $break-small) {	
+  .container-home {
+    &.top {
+      margin-top: 100px;
+      .description {
+        margin-top: 20px;
+        order: 2;
+        width: 100%;
+        padding: 0 10%;
+        h1 {
+          @include font-archive(0, 16px, 24px, #111111);
+        }
+        p {
+          @include font-archive(15, 12px, 18px, #333333);
+          padding-top: 20px; 
+          margin-bottom: 15px;     
+        }
+      }
+      .image {
+        order: 1;
+        width: 100%;
+        text-align: center;
+        padding: 0 10%;
+        img {
+          margin-right: 0;
+          width: 100%;
+          max-width: 150px;
+        }
+      }
+    }
+    &.above {
+      margin: 20px auto;
+      .image {
+        order: 1;
+				width: 100%;
+				padding: 0 10%;
+				text-align: center;
+        img {
+          width: 100%;
+					max-width: 150px;
+					float: unset;
+        }
+      }
+      .description {
+        margin-top: 20px;
+				order: 2;
+				width: 100%;
+				padding: 0 10%;   
+      }
+    }
+    &.bottom {
+      width: 100%;
+      padding: 40px 10% 20px 10%;
+      .image {
+				width: 100%;
+				img {
+					width: 70%;
+				}
+			}
+      .description {
+        padding: 30px 0;
+				width: 100%;
+      }
+    }
+  }
+  footer {
+    .footer-home {
+      margin: 30px auto;
+      h1 {
+        @include font-archive(0, 16px, 24px, #111111);
+      }
+      p {
+        @include font-archive(0, 12px, 18px, #333333);
+        padding-top: 20px
+      }
+      
+    }
+  }
+}

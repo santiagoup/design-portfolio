@@ -1,0 +1,312 @@
+$break-large: 992px;
+$break-medium: 768px;
+$break-small: 576px;
+
+@mixin spacing($mt,
+$mb) {
+    margin-top: $mt;
+    margin-bottom: $mb;
+}
+
+.process-image {
+	max-width: 100%;
+	padding: 0 5%;
+	@include spacing(30px,
+	50px);
+	box-sizing: border-box;
+}
+
+.hero-image {
+	max-width: 100% !important;
+	margin-left: 0 !important;
+	padding: 0 3%;
+	@include spacing(100px,
+	100px);
+	box-sizing: border-box;
+}
+
+.robinhood-container{
+	width: 100%;
+	max-width: 650px;
+	margin: 40px auto;
+	&.image {
+		margin-top: 50px;
+		max-width: 80%;
+		.robinhood-images {
+			width: 100%;
+			display: flex;
+			justify-content: space-evenly;
+			flex-wrap: wrap;
+			img {
+				width: 100%;
+				height: 100%;
+				&.two {
+					width: 25%;
+				}
+			}
+		}		
+		.link {
+			margin: 30px auto;
+			max-width: 350px;
+			display: flex;
+			justify-content: space-between;
+			a {
+				color: #ababab;
+				padding-bottom: 8px;
+				border-bottom: 1px solid #ababab;
+				font-size: 16px;
+				letter-spacing: 0.17px;
+				line-height: 30px;
+				display: inline;
+				position: relative;
+				overflow: hidden;
+				&:after {
+					content: "";
+					position: absolute;
+					z-index: -1;
+					left: 0;
+					right: 100%;
+					bottom: 0px;
+					background: #000;
+					height: 1px;
+					transition-property: left right;
+					transition-duration: 0.3s;
+					transition-timing-function: ease-out;
+				}
+				&:hover,
+				&:focus,
+				&:active {
+					&:after {
+						right: 0;
+					}					
+				}
+				&.active {
+					color: #222222;
+					border-color: #222222;
+				}
+			}			
+		}
+	}
+	h1 {
+		margin-top: 20px;
+		font-size: 24px;
+		color: #111111;
+		letter-spacing: 0.26px;
+		line-height: 33px;
+	}
+	p {
+		margin-top: 20px;
+		font-size: 16px;
+		color: #333333;
+		letter-spacing: 0.17px;
+		line-height: 30px;
+	}
+	ol {
+		margin-top: 20px;
+		padding-left: 10px;
+		list-style: decimal;
+		li {
+			margin-top: 20px;
+			font-size: 16px;
+			color: #333333;
+			letter-spacing: 0.17px;
+			line-height: 30px;
+		}
+	}
+}
+
+.hero-title {
+	&.robinhood {
+		@include spacing(150px,
+	null);
+		text-align: center;
+		h1 {
+			font-size: 80px;
+			line-height: 86px;
+		}
+		p {
+			@include spacing(40px,
+			null);
+			font-size: 30px;
+			line-height: 40px;
+		}
+	}
+}
+
+
+@media screen and (max-width: $break-large) {	
+	.robinhood-container{
+		margin: 30px auto;
+		&.image {
+			margin-top: 30px;
+			max-width: 85%;
+			.robinhood-images {
+				img {
+					&.two {
+						width: 30%;
+					}
+				}
+			}		
+			.link {
+				max-width: 300px;
+				a {
+					padding-bottom: 5px;
+					font-size: 14px;
+					line-height: 20px;
+				}
+			}
+		}
+		h1 {
+			margin-top: 15px;
+			font-size: 22px;
+			line-height: 28px;
+		}
+		p {
+			margin-top: 15px;
+			font-size: 15px;
+			line-height: 26px;
+		}
+		ol {
+			margin-top: 15px;
+			padding-left: 10px;
+			li {
+				margin-top: 15px;
+				font-size: 15px;
+				line-height: 26px;
+			}
+		}
+	}
+	.hero-image {
+		padding: 0%;
+		@include spacing(80px,
+		80px);
+	}
+}
+
+
+@media screen and (max-width: $break-medium) {	
+	.robinhood-container{
+		margin: 25px auto;
+		max-width: 500px;
+		&.image {
+			margin-top: 30px;
+			max-width: 90%;
+			.robinhood-images {
+				img {
+					&.two {
+						width: 35%;
+					}
+				}
+			}		
+			.link {
+				max-width: 220px;
+				a {
+					padding-bottom: 5px;
+					font-size: 12px;
+					line-height: 16px;
+				}
+			}
+		}
+		h1 {
+			margin-top: 15px;
+			font-size: 20px;
+			line-height: 24px;
+		}
+		p {
+			margin-top: 15px;
+			font-size: 13px;
+			line-height: 20px;
+		}
+		ol {
+			margin-top: 15px;
+			padding-left: 10px;
+			li {
+				margin-top: 15px;
+				font-size: 13px;
+				line-height: 20px;
+			}
+		}
+	}
+	.hero-image {
+		@include spacing(60px,
+		60px);
+	}
+	.hero-title {
+		@include spacing(120px,
+		null);
+		&.robinhood {
+			h1 {
+				font-size: 65px;
+				line-height: 70px;
+			}
+			p {
+				font-size: 25px;
+				line-height: 30px;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: $break-small) {	
+	.robinhood-container{
+		margin: 15px auto;
+		max-width: 90%;
+		&.image {
+			margin-top: 20px;
+			max-width: 90%;
+			.robinhood-images {
+				img {
+					&.two {
+						width: 45%;
+					}
+				}
+			}		
+			.link {
+				max-width: 180px;
+				a {
+					padding-bottom: 5px;
+					font-size: 10px;
+					line-height: 14px;
+				}
+			}
+		}
+		h1 {
+			margin-top: 10px;
+			font-size: 17px;
+			line-height: 22px;
+		}
+		p {
+			margin-top: 10px;
+			font-size: 11px;
+			line-height: 18px;
+		}
+		ol {
+			margin-top: 10px;
+			padding-left: 10px;
+			li {
+				margin-top: 10px;
+				font-size: 11px;
+				line-height: 18px;
+			}
+		}
+	}
+	.hero-image {
+		@include spacing(40px,
+		40px);
+	}
+	.hero-title {
+		&.robinhood {
+			@include spacing(100px,
+		null);
+			h1 {
+				font-size: 50px;
+				line-height: 60px;
+			}
+			p {
+				font-size: 20px;
+				line-height: 25px;
+				padding: 0 20px;
+			}
+		}
+	}
+}

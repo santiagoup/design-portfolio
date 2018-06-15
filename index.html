@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# website: http://ogp.me/ns/website#">
 	<meta charset="UTF-8">
 	<title>Daniel Heintzman</title>
@@ -16,6 +17,7 @@
 	<!-- OPEN GRAPH TAGS END -->
 	<link href="img/favicon.ico" rel="shortcut icon">
 	<!-- Stylesheets -->
+	<link href="css/style2.css" rel="stylesheet" type="text/css">
 	<link href="css/style.css" rel="stylesheet">
 	<link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -24,176 +26,210 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.lazyloadxt/1.1.0/jquery.lazyloadxt.extra.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/tilt.js/1.1.21/tilt.jquery.min.js"></script>
 	<script>
-		 $(document).ready(function() {
-			 // Add smooth scrolling to all links
-			 $("a").on('click', function(event) {
+		$(document).ready(function () {
+			// Add smooth scrolling to all links
+			$("a").on('click', function (event) {
 
-					 // Make sure this.hash has a value before overriding default behavior
-					 if (this.hash !== "") {
-							 // Prevent default anchor click behavior
-							 event.preventDefault();
+				// Make sure this.hash has a value before overriding default behavior
+				if (this.hash !== "") {
+					// Prevent default anchor click behavior
+					event.preventDefault();
 
-							 // Store hash
-							 var hash = this.hash;
+					// Store hash
+					var hash = this.hash;
 
-							 // Using jQuery's animate() method to add smooth page scroll
-							 // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
-							 $('html, body').animate({
-									 scrollTop: $(hash).offset().top
-							 }, 800, function() {
+					// Using jQuery's animate() method to add smooth page scroll
+					// The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+					$('html, body').animate({
+						scrollTop: $(hash).offset().top
+					}, 800, function () {
 
-									 // Add hash (#) to URL when done scrolling (default click behavior)
-									 window.location.hash = hash;
-							 });
-					 } // End if
-			 });
-		 });
-	</script><!-- Google Analytics -->
+						// Add hash (#) to URL when done scrolling (default click behavior)
+						window.location.hash = hash;
+					});
+				} // End if
+			});
+		});
+	</script>
+	<!-- Google Analytics -->
 
 	<script>
-		 (function(i, s, o, g, r, a, m) {
-				 i['GoogleAnalyticsObject'] = r;
-				 i[r] = i[r] || function() {
-						 (i[r].q = i[r].q || []).push(arguments)
-				 }, i[r].l = 1 * new Date();
-				 a = s.createElement(o),
-						 m = s.getElementsByTagName(o)[0];
-				 a.async = 1;
-				 a.src = g;
-				 m.parentNode.insertBefore(a, m)
-		 })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+		(function (i, s, o, g, r, a, m) {
+			i['GoogleAnalyticsObject'] = r;
+			i[r] = i[r] || function () {
+				(i[r].q = i[r].q || []).push(arguments)
+			}, i[r].l = 1 * new Date();
+			a = s.createElement(o),
+				m = s.getElementsByTagName(o)[0];
+			a.async = 1;
+			a.src = g;
+			m.parentNode.insertBefore(a, m)
+		})(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
 
-		 ga('create', 'UA-90367920-1', 'auto');
-		 ga('send', 'pageview');
+		ga('create', 'UA-90367920-1', 'auto');
+		ga('send', 'pageview');
 	</script>
 	<!-- <link href="fonts/MyFontsWebfontsKit.css" rel="stylesheet" type="text/css"> -->
 </head>
+
 <body>
-	<section id="overview">
-		<div id="header_work">
-            <div id="navigation">
-               <div class="logo-container">
-                  <a href="index.html">
-                    <img src="img/logo.png">
-                  </a>
-               </div>
-               <ul class="nav-links">
-                  <li>
-                     <a href="index.html#portfolio">Portfolio</a>
-                  </li>
-                  <li>
-                     <a href="archive.html">Archive</a>
-                  </li>
-                  <li>
-                     <a href="about-me.html">About</a>
-                  </li>
-               </ul>
-               <ul class="nav-icons">
-                     <a href="Daniel-Heintzman-Resume.pdf"><img src="img/resume.png">
-                  </a></a>
-                     <a href="mailto:daniel.mc.heintzman@gmail.com"><img src="img/email.png">
-                  </a><span class="email-address">daniel.mc.heintzman@gmail.com</span></a>
-                     <a href="https://linkedin.com/in/dheintzman"><img src="img/linkedin.png"></a>
-               </ul>
-            </div>
-            <div class="nav-hamburger">
-            	<div class="hamburger-line-one"></div>
-            	<div class="hamburger-line-two"></div>
-            </div>
-            <i class="ion-ios-close-empty mobile-nav-close"></i>
-         </div>
+	<nav role="navigation">
+		<div id="menuToggle">
+			<input type="checkbox" />
+			<span></span>
+			<span></span>
+			<span></span>
+			<ul id="menu">
+				<a href="index.html#portfolio"><li>Portfolio</li></a>
+				<a href="archive.htm"><li>Archive</li></a>
+				<a href="about-me.html"><li>About</li></a>
+			</ul>
 		</div>
-		<div id="particle"></div>
-		<div id="overlay">
-			<div class="wrapper">
-				<div class="homepage-hero-image-and-title">
-					<div class="title">
-						<h1 class="fade-in delay">Daniel Heintzman</h1>
-						<p class="fade-in delay">Former product design intern at Robinhood. Currently studying Systems Design Engineering at the University of Waterloo. Here’s some more background about me.</p>
-						<div class="personal">
-							<a>Resume</a>
-							<a>Email</a>
-							<a>LinkedIn</a>
-						</div>
-					</div>
-					<div class="image">
-						<img class="fade-in delay homepage-hero" src="img/home/daniel.png" alt="">
-					</div>
-				</div>
+	</nav>
+	<div id="header_work" style="display: none;">
+		<div id="navigation">
+			<div class="logo-container">
+				<a href="index.html">
+					<img src="img/logo.png">
+				</a>
 			</div>
-			<div class="wrapper">
-				<div class="container right">
-					<div class="description">
-						<h2 class="homepage-project-title">Robinhood</h2>
-						<p class="homepage-project-description">Discover new stocks to invest in with collections</p>
-						<div class="section">
-							<a href="portfolio/rested-homescreen/index.html" target="_self">Case Study</a>
-						</div>
-					</div>
-					<div class="image"><img data-src="img/home/robinhood.png"></div>
-				</div>
-				<div class="container right">
-					<div class="description">
-						<h2 class="homepage-project-title">Rested</h2>
-						<p class="homepage-project-description">Redesigning the homescreen to encourage user engagement.</p>
-						<div class="section">
-							<a href="portfolio/rested-homescreen/index.html" target="_self">Case Study</a>
-						</div>
-					</div>
-					<div class="image"><img data-src="img/home/rested.png"></div>
-				</div>
-			</div>
+			<ul class="nav-links">
+				<li>
+					<a href="index.html#portfolio">Portfolio</a>
+				</li>
+				<li>
+					<a href="archive.html">Archive</a>
+				</li>
+				<li>
+					<a href="about-me.html">About</a>
+				</li>
+			</ul>
+			<ul class="nav-icons">
+				<a href="Daniel-Heintzman-Resume.pdf">
+					<img src="img/resume.png">
+				</a>
+				</a>
+				<a href="mailto:daniel.mc.heintzman@gmail.com">
+					<img src="img/email.png">
+				</a>
+				<span class="email-address">daniel.mc.heintzman@gmail.com</span>
+				</a>
+				<a href="https://linkedin.com/in/dheintzman">
+					<img src="img/linkedin.png">
+				</a>
+			</ul>
+		</div>
+		<div class="nav-hamburger">
+			<div class="hamburger-line-one"></div>
+			<div class="hamburger-line-two"></div>
+		</div>
+		<i class="ion-ios-close-empty mobile-nav-close"></i>
+	</div>
 
-			<div class="wrapper bottom">				
-				<div class="container bottom ">
-					<div class="image"><img data-src="img/home/about.png"></div>
-					<div class="description">
-						<h2 class="homepage-project-title">about</h2>
-						<p class="homepage-project-description">Outline of past work experiences and backgournd.</p>
-						<div class="section">
-							<a href="portfolio/rested-homescreen/index.html" target="_self">Read more about me</a>
-						</div>
-					</div>
-					
+	<div class="wrapper-home">
+		<div class="container-home top">
+			<div class="description">
+				<h1 class="fade-in delay">Daniel Heintzman</h1>
+				<p class="fade-in delay">Product designer pursuing a degree in Systems Design Engineering at the University of Waterloo.</p>
+				<div class="section">
+					<a>Resume</a>
+					<a>Email</a>
+					<a>LinkedIn</a>
 				</div>
-				<div class="container bottom">
-					<div class="image"><img data-src="img/home/archive.png"></div>
-					<div class="description">
-						<h2 class="homepage-project-title">Archive</h2>
-						<p class="homepage-project-description">Selection of previous design work and personal projects.</p>
-						<div class="section">
-							<a href="portfolio/rested-homescreen/index.html" target="_self">See my archived work</a>
-						</div>
-					</div>
-					
-				</div>				
 			</div>
-					
-			
+			<div class="image">
+				<img class="fade-in delay" src="img/daniel.png" alt="">
+			</div>
+		</div>
+	</div>
 
-			<!-- Footer Images/Links -->
-			<footer>
-				<div class="footer-cont">
-					<h1>Contact</h1>
-					<P>Say Hello at <a>daniel.mc.heintzman@gmail.com</a> or send me a connection request on <a>Linkedin</a></P>
+	<div class="wrapper-home">
+		<div class="container-home above">
+			<div class="description">
+				<h2>Robinhood</h2>
+				<p>Discover new stocks to invest in with collections.</p>
+				<div class="section">
+					<a href="portfolio/robinhood/index.html" target="_self">Case Study</a>
 				</div>
-			</footer>
+			</div>
+			<div class="image">
+				<img data-src="img/robinhood.png">
+			</div>
 		</div>
+	</div>
+	<div class="wrapper-home">
+		<div class="container-home above">
+			<div class="description">
+				<h2>Rested</h2>
+				<p>Redesigning the homescreen to encourage user engagement.</p>
+				<div class="section">
+					<a href="portfolio/rested-homescreen/index.html" target="_self">Case Study</a>
+				</div>
+			</div>
+			<div class="image">
+				<img data-src="img/rested.png">
+			</div>
 		</div>
-	</section>
+	</div>
+	<div class="wrapper-home bottom">
+		<div class="container-home bottom ">
+			<div class="image">
+				<img data-src="img/about.png">
+			</div>
+			<div class="description">
+				<h2>about</h2>
+				<p>Outline of past work experiences and backgournd.</p>
+				<div class="section">
+					<a href="about-me.html" target="_self">Read more about me</a>
+				</div>
+			</div>
+		</div>
+		<div class="container-home bottom">
+			<div class="image">
+				<img data-src="img/archive.png">
+			</div>
+			<div class="description">
+				<h2>Archive</h2>
+				<p>Selection of previous design work and personal projects.</p>
+				<div class="section">
+					<a href="archive.html" target="_self">See my archived work</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Footer Images/Links -->
+	<footer>
+		<div class="footer-home">
+			<h1>Contact</h1>
+			<P>Say Hello at
+				<a>daniel.mc.heintzman@gmail.com</a> or send me a connection request on
+				<a>Linkedin</a>
+			</P>
+		</div>
+	</footer>
+	<!--
+<div class="footer">
+<section id="about-me">
+<p style="font-size: 14px">Daniel Heintzman</p>
+</div>-->
+	</div>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 	<script src="js/main.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/tilt.js/1.2.0/tilt.jquery.min.js"></script>
 	<script>
-		$('#header_work #navigation li:nth-child(1) a').css({"color": '#222222'});
+		$('#header_work #navigation li:nth-child(1) a').css({
+			"color": '#222222'
+		});
 		$('.js-tilt').tilt({
-		    maxTilt: 20,
-			 perspective: 300,
-			 scale: 1,
-		    easing: "cubic-bezier(.03,.98,.52,.99)",
-		    speed: 5000,
-		    transition: true,
+			maxTilt: 20,
+			perspective: 300,
+			scale: 1,
+			easing: "cubic-bezier(.03,.98,.52,.99)",
+			speed: 5000,
+			transition: true,
 		})
 	</script>
 </body>
+
 </html>
