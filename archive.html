@@ -47,43 +47,26 @@
 
 <body>
   <div id="header_work">
-    <div id="navigation">
+    <div class="new-navigation">
+      <nav role="navigation">
+        <div id="menuToggle">
+          <input type="checkbox" />
+          <span></span>
+          <span></span>
+          <span></span>
+          <ul id="menu">
+            <a href="index.html"><li>Portfolio</li></a>
+            <a href="archive.html"><li>Archive</li></a>
+            <a href="about-me.html"><li>About</li></a>
+          </ul>
+        </div>
+      </nav>
       <div class="logo-container">
         <a href="index.html">
           <img src="img/logo.png">
         </a>
-      </div>
-      <ul class="nav-links">
-        <li>
-          <a href="index.html#portfolio">Portfolio</a>
-        </li>
-        <li>
-          <a href="archive.html">Archive</a>
-        </li>
-        <li>
-          <a href="about-me.html">About</a>
-        </li>
-      </ul>
-      <ul class="nav-icons">
-        <a href="Daniel-Heintzman-Resume.pdf">
-          <img src="img/resume.png">
-        </a>
-        </a>
-        <a href="mailto:daniel.mc.heintzman@gmail.com">
-          <img src="img/email.png">
-        </a>
-        <span class="email-address">daniel.mc.heintzman@gmail.com</span>
-        </a>
-        <a href="https://linkedin.com/in/dheintzman">
-          <img src="img/linkedin.png">
-        </a>
-      </ul>
+      </div>			
     </div>
-    <div class="nav-hamburger">
-      <div class="hamburger-line-one"></div>
-      <div class="hamburger-line-two"></div>
-    </div>
-    <i class="ion-ios-close-empty mobile-nav-close"></i>
   </div>
 
   <div class="hero-title archive">
@@ -91,101 +74,131 @@
   </div>
 
   <div class="container-archive">    
-    <div class="sub-container">
-      <img src="img/archive/uberpool.png" alt="Uber Poll">
-      <a class="desc" href="archive/uberpool-redesign/index.html">
-        <h2>UberPool for long distances</h2>
-        <p>Empowering long distance travellers to plan trips together</p>
-      </a>
+    <div class="sub-container first">
+      <a class="full" href="archive/uberpool-redesign/index.html">
+        <img src="img/archive/uberpool.png" alt="Uber Poll">
+        <div class="desc">
+          <h2>UberPool for long distances</h2>
+          <p>Empowering long distance travellers to plan trips together</p>
+        </div>
+      </a>      
     </div>
-    <div class="sub-container half">
-      <img src="img/archive/crypto.png" alt="Crypto">
-      <a class="desc" href="">
-        <h2>Robinghood Crypto trading</h2>
-        <p>Specify in dollars or amount of crypto coins how much you want to trade</p>
+    <div class="sub-container second">
+      <a class="half" href="archive/robinhood-crypto/index.html">
+        <img src="img/archive/crypto.png" alt="Crypto">
+        <div class="desc">
+          <h2>Robinghood Crypto trading</h2>
+          <p>Specify in dollars or amount of crypto coins how much you want to trade</p>
+        </div>
       </a>
-      <img src="img/archive/sleepkit.png" alt="Sleep Kit">
-      <a class="desc" href="archive/sleep-kit/index.html">
-        <h2>Sleep remedy kit</h2>
-        <p>Build yourself a personalized sleep remedy kit to address your personal sleep issues</p>
+      <a class="half" href="archive/sleep-kit/index.html">
+        <img src="img/archive/sleepkit.png" alt="Sleep Kit">
+        <div class="desc">
+          <h2>Sleep remedy kit</h2>
+          <p>Build yourself a personalized sleep remedy kit to address your personal sleep issues</p>
+        </div>
       </a>
-      <img src="img/archive/linkedin.png" alt="Linkedin">
-      <a class="desc" href="archive/linkedin-hackathon/index.html">
-        <h2>Food decision making</h2>
-        <p>Helping peopel with allergies make healthy food deicsions</p>
-      </a>
-    </div>
-  </div>
-  <div class="container-archive">
-    <div class="sub-container half">
-      <img src="img/archive/relief.png" alt="Relief">
-      <a class="desc" href="archive/relief/index.html">
-        <h2>Daily stress relief</h2>
-        <p>Relieve stress while tracking heart rate variability</p>
-      </a>
-      <img src="img/archive/sleep-recording.png" alt="Sleep Recording">
-      <a class="desc" href="archive/sleep-diagnosis/index.html">
-        <h2>Sleep disorder diagnosis</h2>
-        <p>Diagnose your sleep for disorders like sleep apnea from the comfort of your own home</p>
-      </a>
-      <img src="img/archive/linkedin.png" alt="Linkedin">
-      <a class="desc" href="portfolio/manulife-financial/index.html">
-        <h2>John Hancock Innovation Lab</h2>
-        <p>A new way investment solution that ensures you a consistent income in restirement</p>
-      </div>
-    </a>
-    <div class="sub-container">
-      <img src="img/archive/for-you.png" alt="For You">
-      <a class="desc" href="">
-        <h2>Collections on Robinhood for Web</h2>
-        <p>Discover investment opportunities with stock collections</p>
+      <a class="half" href="archive/linkedin-hackathon/index.html">
+        <img src="img/archive/linkedin.png" alt="Linkedin">
+        <div class="desc" >
+          <h2>Food decision making</h2>
+          <p>Helping peopel with allergies make healthy food deicsions</p>
+        </div>
       </a>
     </div>
   </div>
   <div class="container-archive">
-    <div class="sub-container">
-      <img src="img/archive/sprout.png" alt="Sprout">
-      <a class="desc" href="portfolio/sprout-personal-goal/index.html">
-        <h2>Sprout</h2>
-        <p>Build personal fitness goals for health improvement</p>
+    <div class="sub-container second">
+      <a class="half" href="archive/relief/index.html">
+        <img src="img/archive/relief.png" alt="Relief">
+        <div class="desc">
+          <h2>Daily stress relief</h2>
+          <p>Relieve stress while tracking heart rate variability</p>
+        </div>
+      </a>
+      <a class="half" href="archive/sleep-diagnosis/index.html">
+        <img src="img/archive/sleep-recording.png" alt="Sleep Recording">
+        <div class="desc">
+          <h2>Sleep disorder diagnosis</h2>
+          <p>Diagnose your sleep for disorders like sleep apnea from the comfort of your own home</p>
+        </div>
+      </a>
+      <a class="half" href="portfolio/manulife-financial/index.html">
+        <img src="img/archive/manulife.png" alt="manulife">
+        <div class="desc">
+          <h2>John Hancock Innovation Lab</h2>
+          <p>A new way investment solution that ensures you a consistent income in restirement</p>
+        </div>
       </a>
     </div>
-    <div class="sub-container half">
-      <img src="img/archive/melon.png" alt="Melon">
-      <a class="desc" href="portfolio/food-recipe/index.html">
-        <h2>Melon</h2>
-        <p>Organizing the way you find, save and cook recipes</p>
-      </a>
-      <img src="img/archive/risk-assessment.png" alt="Risk Assessment">
-      <a class="desc" href="archive/health-risk-assessment/index.html">
-        <h2>Dsicover your health risks</h2>
-        <p>Get personalized health goals that address your health risks</p>
-      </a>
-      <img src="img/archive/settings.png" alt="Settings">
-      <a class="desc" href="">
-        <h2>Settings on Robinhood for Web</h2>
-        <p>Update account information, investment profile and contract information on Robinhood's web product</p>
+    <div class="sub-container first">
+      <a class="full" href="archive/robinhood-collections/index.html">
+        <img src="img/archive/for-you.png" alt="For You">
+        <div class="desc">
+          <h2>Collections on Robinhood for Web</h2>
+          <p>Discover investment opportunities with stock collections</p>
+        </div>
       </a>
     </div>
   </div>
   <div class="container-archive">
-    <div class="sub-container half">
-      <img src="img/archive/email.png" alt="Email">
-      <a class="desc" href="archive/weekly-update/index.html">
-        <h2>Your weekly haelth update</h2>
-        <p>A weekly overview of the progress towards your health goals</p>
-      </a>
-      <img src="img/archive/atomic.png" alt="Atomic">
-      <a class="desc" href="archive/startup-process/index.html">
-        <h2>The start-up process at a top venture fund</h2>
-        <p>An inforgraphic of how Atomic Labs, a venture fund that founds companies, stars their companies</p>
+    <div class="sub-container first">
+      <a class="full" href="portfolio/sprout-personal-goal/index.html">
+        <img src="img/archive/sprout.png" alt="Sprout">
+        <div class="desc">
+          <h2>Sprout</h2>
+          <p>Build personal fitness goals for health improvement</p>
+        </div>
       </a>
     </div>
-    <div class="sub-container">
-      <img src="img/archive/heartbeat.png" alt="Heartbeat">
-      <a class="desc" href="portfolio/sports-technology/index.html">
-        <h2>Heartbeat</h2>
-        <p>Discover technology products that enhance performance in your favorite sports</p>
+    <div class="sub-container second">
+      <a class="half" href="portfolio/food-recipe/index.html">
+        <img src="img/archive/melon.png" alt="Melon">
+        <div class="desc">
+          <h2>Melon</h2>
+          <p>Organizing the way you find, save and cook recipes</p>
+        </div>
+      </a>
+      <a class="half" href="archive/health-risk-assessment/index.html">
+        <img src="img/archive/risk-assessment.png" alt="Risk Assessment">
+        <div class="desc">
+          <h2>Dsicover your health risks</h2>
+          <p>Get personalized health goals that address your health risks</p>
+        </div>
+      </a>
+      <a class="half" href="archive/robinhood-settings/index.html">
+        <img src="img/archive/settings.png" alt="Settings">
+        <div class="desc">
+          <h2>Settings on Robinhood for Web</h2>
+          <p>Update account information, investment profile and contract information on Robinhood's web product</p>
+        </div>
+      </a>
+    </div>
+  </div>
+  <div class="container-archive">
+    <div class="sub-container second">
+      <a class="half" href="archive/weekly-update/index.html">
+        <img src="img/archive/email.png" alt="Email">
+        <div class="desc">
+          <h2>Your weekly haelth update</h2>
+          <p>A weekly overview of the progress towards your health goals</p>
+        </div>
+      </a>
+      <a class="half" href="archive/startup-process/index.html">
+        <img src="img/archive/atomic.png" alt="Atomic">
+        <div class="desc">
+          <h2>The start-up process at a top venture fund</h2>
+          <p>An inforgraphic of how Atomic Labs, a venture fund that founds companies, stars their companies</p>
+        </div>
+      </a>
+    </div>
+    <div class="sub-container first">
+      <a class="full" href="portfolio/sports-technology/index.html">
+        <img src="img/archive/heartbeat.png" alt="Heartbeat">
+        <div class="desc">
+          <h2>Heartbeat</h2>
+          <p>Discover technology products that enhance performance in your favorite sports</p>
+        </div>
       </a>
     </div>
   </div>

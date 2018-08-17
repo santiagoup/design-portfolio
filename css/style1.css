@@ -13,37 +13,63 @@
   justify-content: center;
   width: 45%;
 }
-.container-archive .sub-container img {
+.container-archive .sub-container .full img {
   width: 100%;
-  margin-top: 30px;
+  margin-top: 15px;
+  margin-bottom: 15px;
 }
-.container-archive .sub-container .desc {
+.container-archive .sub-container .full .desc {
   width: 100%;
   text-align: left;
-  padding: 0 20px;
+  padding: 50px 20px;
   box-sizing: border-box;
 }
-.container-archive .sub-container .desc h2 {
-  margin-top: 40px;
+.container-archive .sub-container .full .desc h2 {
+  margin-top: 20px;
   font-size: 21px;
   line-height: 27px;
   color: #111111;
 }
-.container-archive .sub-container .desc p {
+.container-archive .sub-container .full .desc p {
   margin-top: 10px;
   font-size: 14px;
   line-height: 18px;
   color: #888888;
 }
-.container-archive .sub-container.half {
+.container-archive .sub-container .full:hover {
+  background-color: #f5f4f4;
+}
+.container-archive .sub-container .half {
+  display: flex;
+  align-items: flex-start;
   flex-flow: row;
   flex-wrap: wrap;
 }
-.container-archive .sub-container.half img {
+.container-archive .sub-container .half img {
   width: 35%;
+  margin-top: 15px;
+  margin-bottom: 15px;
 }
-.container-archive .sub-container.half .desc {
+.container-archive .sub-container .half .desc {
   width: 65%;
+  text-align: left;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+.container-archive .sub-container .half .desc h2 {
+  margin-top: 20px;
+  font-size: 21px;
+  line-height: 27px;
+  color: #111111;
+}
+.container-archive .sub-container .half .desc p {
+  margin-top: 10px;
+  font-size: 14px;
+  line-height: 18px;
+  color: #888888;
+}
+.container-archive .sub-container .half:hover {
+  background-color: #f5f4f4;
 }
 
 @media screen and (max-width: 992px) {
@@ -55,16 +81,31 @@
   }
 }
 @media screen and (max-width: 768px) {
-  .container-archive .sub-container .desc {
-    padding: 0 10px;
+  .container-archive .sub-container .full .desc {
+    padding: 30px 10px;
   }
-  .container-archive .sub-container .desc h2 {
-    margin-top: 35px;
+  .container-archive .sub-container .full .desc h2 {
+    margin-top: 20px;
     font-size: 16px;
     line-height: 18px;
     color: #111111;
   }
-  .container-archive .sub-container .desc p {
+  .container-archive .sub-container .full .desc p {
+    margin-top: 10px;
+    font-size: 12px;
+    line-height: 15px;
+    color: #888888;
+  }
+  .container-archive .sub-container .half .desc {
+    padding: 0 10px;
+  }
+  .container-archive .sub-container .half .desc h2 {
+    margin-top: 20px;
+    font-size: 16px;
+    line-height: 18px;
+    color: #111111;
+  }
+  .container-archive .sub-container .half .desc p {
     margin-top: 10px;
     font-size: 12px;
     line-height: 15px;
@@ -77,29 +118,54 @@
   }
   .container-archive .sub-container {
     width: 100%;
+  }
+  .container-archive .sub-container.first {
     order: 1;
   }
-  .container-archive .sub-container img {
-    margin-top: 25px;
+  .container-archive .sub-container.second {
+    order: 2;
   }
-  .container-archive .sub-container .desc {
-    padding: 0 10px;
+  .container-archive .sub-container .full img {
+    margin-top: 15px;
+    margin-bottom: 15px;
   }
-  .container-archive .sub-container .desc h2 {
-    margin-top: 30px;
-    font-size: 21px;
+  .container-archive .sub-container .full .desc {
+    padding: 40px 10px;
+  }
+  .container-archive .sub-container .full .desc h2 {
+    margin-top: 20px;
+    font-size: 18px;
     line-height: 27px;
     color: #111111;
   }
-  .container-archive .sub-container .desc p {
+  .container-archive .sub-container .full .desc p {
     margin-top: 10px;
-    font-size: 14px;
+    font-size: 13px;
     line-height: 18px;
     color: #888888;
   }
-  .container-archive .sub-container.half {
-    order: 2;
+  .container-archive .sub-container .half img {
+    margin-top: 15px;
+    margin-bottom: 15px;
   }
+  .container-archive .sub-container .half .desc {
+    padding: 0 10px;
+  }
+  .container-archive .sub-container .half .desc h2 {
+    margin-top: 20px;
+    font-size: 18px;
+    line-height: 27px;
+    color: #111111;
+  }
+  .container-archive .sub-container .half .desc p {
+    margin-top: 10px;
+    font-size: 13px;
+    line-height: 18px;
+    color: #888888;
+  }
+}
+img {
+  border-radius: 8px;
 }
 
 /*# sourceMappingURL=style1.css.map */
